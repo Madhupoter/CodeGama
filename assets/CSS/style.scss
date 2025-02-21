@@ -1,0 +1,474 @@
+@import 'elements';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+// Header Start
+
+.header_main {
+    padding: 30px 0;
+    align-items: center;
+
+    .logo {
+        a {
+            text-decoration: none;
+
+            img {
+                width: 120px;
+            }
+        }
+    }
+
+    .logo_center {
+        text-align: center;
+
+        h1 {
+            @include Title;
+            margin: 0;
+        }
+
+        p {
+            @include reg;
+            text-transform: capitalize;
+            color: $text_color;
+            margin: 0;
+        }
+
+        span {
+            @include light;
+            text-transform: capitalize;
+            color: $text_color;
+            margin: 0;
+        }
+    }
+
+    .header_right {
+        text-align: end;
+
+        .header_button {
+            margin: 15px 0 20px 0;
+
+            a {
+                background-color: $title_color;
+                color: $white_color;
+                @include reg;
+                font-size: 0.9rem;
+                padding: 8px 20px;
+                border: none;
+                border-radius: 5px;
+                text-decoration: none;
+                margin: 0px 5px;
+            }
+
+            #donate {
+                background-color: $secondary_color;
+                color: $text_color;
+            }
+
+        }
+
+        .header_contact {
+            margin: 5px 0;
+
+            .fas {
+                @include icon;
+            }
+
+            span {
+                @include reg;
+            }
+        }
+    }
+}
+
+// Header Top Ends
+
+// Navbar Start
+
+.navbar {
+    background-color: $bg_color;
+}
+
+.navbar-nav {
+    .nav-item {
+        .nav-link {
+            @include light;
+            color: $text_color;
+        }
+
+        .nav-link.active {
+            @include medium;
+            font-size: 0.9rem;
+        }
+    }
+}
+
+// Navbar Ends
+
+// Header Ends
+
+// Main Start
+
+.bg_main {
+    background: url('../images/bg_shapebackground.png') no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+}
+
+.highlights {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+
+    .highlights_det {
+
+        .highlights_img {
+            background-color: $white_color;
+            border-radius: 10px;
+            padding: 16px;
+            text-align: center;
+        }
+
+        .highlights_text {
+            h3 {
+                @include Title;
+                font-size: 1.3rem;
+            }
+
+            p {
+                @include Para;
+            }
+        }
+    }
+}
+
+// About Page
+
+.about,
+.cards {
+    margin-top: 50px;
+}
+
+.about_det {
+    .about_title {
+        @include Title;
+    }
+
+    .about_para {
+        @include Para;
+    }
+
+    .Mv_title {
+        @include semiBold;
+        color: $text_color;
+        font-size: 1.5rem;
+    }
+
+    #about_btn {
+        @include btn;
+    }
+}
+
+.cards {
+    background-color: #E8F6F6;
+    padding: 50px 0;
+
+}
+
+.about_detail {
+    width: 50%;
+}
+
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    padding: 20px;
+    gap: 20px;
+
+    .card-item {
+        background: $white_color;
+        padding: 6px 16px;
+        border-radius: 8px;
+        box-shadow: 0px 5px 10px rgb(1, 71, 102, 0.4);
+        list-style: none;
+        cursor: pointer;
+        text-decoration: none;
+        border: 2px solid transparent;
+        transition: border 0.5s ease;
+        color: $title_color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .card-item-img {
+            border-radius: 50%;
+            margin-top: 20px;
+            width: 21%;
+            text-align: center;
+            background-color: #E9EBF8;
+            box-shadow: 0px 1px 3px rgb(1, 71, 102, 0.4);
+            padding: 20px;
+
+            .fas {
+                font-size: 2rem;
+            }
+        }
+
+        .card-title {
+            @include semiBold;
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+
+        .card-para {
+            @include Para;
+            margin-top: 5px;
+            text-align: center;
+            color: $text_color;
+        }
+
+        .arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotate(-35deg);
+            height: 40px;
+            width: 40px;
+            color: $title_color;
+            border: 1px solid $title_color;
+            border-radius: 50%;
+            margin: 5px 0 10px 0;
+            transition: 0.2s ease;
+        }
+    }
+
+    .card-item:hover {
+        border: 2px solid $title_color;
+        background: $title_color;
+        color: $white_color;
+    }
+
+    .card-item:hover .card-item-img,
+    .card-item:hover .arrow {
+        color: $title_color;
+        background-color: $white_color;
+    }
+
+    .card-item:hover .card-para,
+    .card-item:hover .card-title {
+        color: $white_color;
+    }
+}
+
+.bg_volunter {
+    background: url('../images/bg_Voltuneer.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+
+    .volunter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+
+        .volunter_det {
+            text-align: center;
+            width: 75%;
+
+            .volunter_title {
+                @include Title;
+            }
+
+            .volunter_para {
+                @include Para;
+                text-align: center;
+            }
+
+            .volunter_btn {
+                @include btn;
+            }
+        }
+    }
+}
+
+// Blogs Start
+.blog {
+    margin-top: 50px;
+}
+
+.blog_det {
+    text-align: start;
+    width: 50%;
+
+    .blog_title {
+        @include Title;
+    }
+
+    .blog_para {
+        @include Para;
+    }
+}
+
+.blogs_det {
+    margin: 30px 0;
+
+    .blog {
+        width: 31.7%;
+        background-color: $white_color;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.14);
+        margin: 0 10px;
+        border-radius: 10px;
+        text-align: center;
+        padding: 15px;
+
+        a {
+            text-decoration: none;
+            color: $text_color;
+
+
+            img {
+                width: 100%;
+                height: 205px;
+                border-radius: 10px;
+            }
+
+            h6 {
+                @include semiBold;
+                margin-top: 10px;
+                text-transform: uppercase;
+            }
+
+            p {
+                @include Para;
+                text-align: center;
+            }
+        }
+    }
+}
+
+// Footer Starts
+
+footer {
+    margin-top: 80px;
+}
+.footer_top {
+    padding-bottom: 50px;
+}
+
+.footer_logo {
+    h4 {
+        @include Title;
+        margin-bottom: 20px;
+    }
+}
+
+.footer_add {
+    h6 {
+        @include medium;
+        text-transform: capitalize;
+        margin-top: 20px;
+    }
+
+    .fas {
+        color: $title_color;
+        font-size: 1.2rem;
+    }
+
+    span {
+        @include light;
+        margin-bottom: 10px;
+    }
+}
+
+.footer_contact_det {
+    .footer_contact {
+        .fas {
+            color: $title_color;
+            font-size: 1.2rem;
+        }
+
+        span {
+            @include light;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.footer_social {
+    margin: 15px 0 10px 0;
+
+    span {
+        @include reg;
+        color: $title_color;
+    }
+
+    .fab {
+        font-size: 1.2rem;
+        background-color: $title_color;
+        color: $white_color;
+        margin: 0 5px;
+        padding: 8px 10px;
+        border-radius: 50%;
+    }
+}
+
+.footer_bottom {
+    padding: 20px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.14);
+
+    .footer_navbar {
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+
+            li {
+                list-style-type: none;
+
+                a {
+                    text-decoration: none;
+                    @include Para;
+                    color: $text_color;
+                }
+            }
+        }
+    }
+
+    .footer_copyright {
+
+        p {
+            @include Para;
+            color: $text_color;
+            text-align: end;
+            margin: 0;
+        }
+    }
+}
+
+
+
+#goTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 16px;
+    background-color: $bg_color;
+    color: $text_color;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
